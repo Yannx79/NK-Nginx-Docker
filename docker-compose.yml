@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nginx:
+    # image: nginx:latest
+    # image: nk-nginx:latest
+    image: yan640/nk-nginx:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nk-nginx
+    ports:
+      - "8080:80"  # Exponemos el puerto 80 del contenedor al puerto 8080 de la máquina host
+    volumes:
+      - ./html:/var/www/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    # env_file:
+    #   - .env
+    # environment:
+    #   - NGINX_HOST=${NGINX_HOST:-nk.com}
+    #   - NGINX_PORT=${NGINX_PORT:-80}
+    restart: on-failure # no, always, on-failure, unless-stopped

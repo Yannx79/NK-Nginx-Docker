@@ -1,0 +1,40 @@
+# Archivos y directorios de sistema
+.DS_Store
+Thumbs.db
+
+# Node modules (si usas Node.js en tu proyecto)
+node_modules/
+
+# Archivos de entorno de desarrollo
+.env
+.env.local
+.env.*.local
+
+# Archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de compilación
+/dist/
+/build/
+/tmp/
+/out/
+
+# Directorios de logs
+*.log
+
+# Archivos de dependencias en PHP (si usas Composer)
+/vendor/
+
+# Archivos de dependencias en Python (si usas virtualenv)
+*.pyc
+*.pyo
+__pycache__/
+
+# Archivos de dependencias en Java
+*.class
+
+# Archivos de Docker que no deseas subir
+docker-compose.override.yml
